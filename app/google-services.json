@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1028692030316",
+    "firebase_url": "https://chat-baji.firebaseio.com",
+    "project_id": "chat-baji",
+    "storage_bucket": "chat-baji.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028692030316:android:01ae41f09240acad",
+        "android_client_info": {
+          "package_name": "com.naitik.piechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028692030316-mn3uk139csskocc77supe949falkj8pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXCIyBiDSdYr7FUFb2U5Pivgv4EqTT0dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028692030316-mn3uk139csskocc77supe949falkj8pu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

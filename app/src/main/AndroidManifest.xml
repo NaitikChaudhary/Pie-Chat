@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.naitik.piechat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pie"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/pie"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name="com.naitik.piechat.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.naitik.piechat.ImageActivity"></activity>
+        <activity
+            android:name="com.naitik.piechat.ChatActivity"
+            android:parentActivityName="com.naitik.piechat.MainActivity" >
+            <intent-filter>
+                <action android:name="com.naitik.piechat_TARGET_NOTIFICATION_Message"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.naitik.piechat.ProfileActivity">
+            <intent-filter>
+                <action android:name="com.naitik.piechat_TARGET_NOTIFICATION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.naitik.piechat.AllUsersActivity"
+            android:parentActivityName="com.naitik.piechat.MainActivity" />
+        <activity
+            android:name="com.naitik.piechat.StatusActivity"
+            android:parentActivityName="com.naitik.piechat.SettingsActivity" />
+        <activity
+            android:name="com.naitik.piechat.SettingsActivity"
+            android:parentActivityName="com.naitik.piechat.MainActivity" />
+        <activity
+            android:name="com.naitik.piechat.LoginActivity"
+            android:parentActivityName="com.naitik.piechat.StartActivity" />
+        <activity
+            android:name="com.naitik.piechat.RegisterActivity"
+            android:parentActivityName="com.naitik.piechat.StartActivity" />
+        <activity android:name="com.naitik.piechat.StartActivity" />
+        <activity android:name="com.naitik.piechat.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>
